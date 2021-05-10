@@ -2,6 +2,7 @@ import * as THREE from "three"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import Cube from "./Cube"
 
+import GUI from "~/singletons/GUI"
 import RAF from "~singletons/RAF"
 
 export default class Scene {

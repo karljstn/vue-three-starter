@@ -12,10 +12,7 @@ class RAF {
 
     subscribe = (name: string, callback: (dt: number) => void) => {
         // console.log('subscribe : ', name)
-        this.callbacks.set(
-            name,
-            callback
-        )
+        this.callbacks.set(name, callback)
     }
 
     unsubscribe = (name: string) => {
@@ -27,7 +24,7 @@ class RAF {
         this.rafID = requestAnimationFrame(this.render) //TODO: check native time value
 
         const dt = time - this.prevTime
-        this.callbacks.forEach((cb) => cb(dt))
+        this.callbacks.forEach(cb => cb(dt))
 
         this.prevTime = time
     }
